@@ -1,95 +1,101 @@
 import { motion } from "framer-motion";
 import React from "react";
-// import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
 
-const Box = styled(motion.a)`
-  width: calc(10rem + 15vw);
+const Box = styled(motion.div)`
+  width: 100%;
+  max-width: 30rem;
   text-decoration: none;
   height: 20rem;
   padding: 1rem;
   color: ${(props) => props.theme.text};
   border: 2px solid ${(props) => props.theme.text};
-  backdrop-filter: blur(2px);
+  background-color: ${(props) => props.theme.body};
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-
   display: flex;
   flex-direction: column;
-  z-index: 5;
+  align-items: center;
+  justify-content: space-between;
 
-  &:hover {
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.text};
-    transition: all 0.3s ease;
-  }
+  
 `;
 
 const Image = styled.div`
-  background-image: ${(props) => `url(${props.img})`};
   width: 100%;
   height: 60%;
+  background-image: url(${(props) => props.img});
   background-size: cover;
-  border: 1px solid transparent;
-  background-position: center center;
-
-  ${Box}:hover & {
-    border: 1px solid ${(props) => props.theme.body};
-  }
+  background-position: center;
 `;
+
 const Title = styled.h3`
-  color: inherit;
-  padding: 0.5rem 0;
-  padding-top: 1rem;
+  margin: 0;
+  padding: 1rem;
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  border-bottom: 1px solid ${(props) => props.theme.text};
+  color: ${(props) => props.theme.title};
+`;
 
-  ${Box}:hover & {
-    border-bottom: 1px solid ${(props) => props.theme.body};
+const HashTags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+`;
+
+const Tag = styled.span`
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: ${(props) => props.theme.tagBg};
+  color: ${(props) => props.theme.tagText};
+  border-radius: 0.5rem;
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  
+`;
+
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: blue;
+  font-weight:bold;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.text};
   }
 `;
-const HashTags = styled.div`
-  padding: 0.5rem 0;
-`;
-const Tag = styled.span`
-  padding-right: 0.5rem;
-`;
-const Date = styled.span`
-  padding: 0.5rem 0;
-`;
 
-const Container = styled(motion.div)``;
-
-// Framer motion configuration
-const Item = {
-  hidden: {
-    scale: 0,
-  },
-  show: {
-    scale: 1,
-    transition: {
-      type: "spring",
-      duration: 0.5,
-    },
-  },
-};
+const GithubLink = styled(StyledLink)`
+  display: flex;
+  align-items: center;
+`;
 
 const BlogComponent = (props) => {
-  const { name, tags, date, imgSrc, link } = props.blog;
+  const { name, tags, Github, imgSrc, link } = props.blog;
+
   return (
-    <Container variants={Item}>
-      <Box target="_blank" href={`${link}`}>
-        <Image img={imgSrc} />
-        <Title>{name}</Title>
-        <HashTags>
-          {tags.map((t, id) => {
-            return <Tag key={id}>#{t}</Tag>;
-          })}
-        </HashTags>
-        <Date>{date}</Date>
-      </Box>
-    </Container>
+    <Box>
+      <Image img={imgSrc} />
+      <Title>{name}</Title>
+      <HashTags>
+        {tags.map((tag, index) => (
+          <Tag key={index}>#{tag}</Tag>
+        ))}
+      </HashTags>
+      <LinksContainer>
+        <StyledLink href={link} target="_blank" rel="noopener noreferrer">Website</StyledLink>
+        <GithubLink href={Github} target="_blank" rel="noopener noreferrer">
+          GitHub
+        </GithubLink>
+      </LinksContainer>
+    </Box>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import {lightTheme} from './Themes';
-import { Design, Develope} from './AllSvgs';
+import { DSA, Develope} from './AllSvgs';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -11,7 +11,7 @@ import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
 const Box = styled.div`
-background-color: ${props => props.theme.body};
+background-color: #DDD3C3;
 width: 100vw;
 height:100vh;
 position: relative;
@@ -25,7 +25,8 @@ align-items: center;
 const Main = styled.div`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
-background-color: ${props => props.theme.body};
+// background-color: ${props => props.theme.body};
+background-color:#DDD3C3;
 padding: 2rem;
 width: 30vw;
 height: 60vh;
@@ -41,6 +42,8 @@ justify-content: space-between;
 &:hover{
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
+    transition:1s ease;
+
 }
 `
 
@@ -69,52 +72,62 @@ padding: 0.5rem 0;
 
 ${Main}:hover &{
    
-        color:${props => props.theme.body};
-    
+    color:${props => props.theme.body};
+
 }
 
 strong{
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+margin-bottom: 1rem;
+text-transform: uppercase;
 }
 ul,p{
-    margin-left: 2rem;
+margin-left: 2rem;
+}
+a{
+    text-decoration:none;
+    color: ${props => props.theme.text};
+    ${Main}:hover &{
+   
+        color:${props => props.theme.body};
+    
+    }
+    
 }
 `
 
 const MySkillsPage = () => {
-    return (
-        <ThemeProvider theme={lightTheme}>
+return (
+    <ThemeProvider theme={lightTheme}>
 <Box>
 
 <LogoComponent theme='light'/>
 <SocialIcons theme='light'/>
 <PowerButton />
 <ParticleComponent theme='light' />
-            <Main>
+        <Main>
 <Title>
-    <Design width={40} height={40} /> Designer
+<Develope width={40} height={40} /> DSA
 </Title>
 <Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
+Solving Data Structure and Algorithm problems using C++
 </Description>
 <Description>
-<strong>I like to Design</strong>
+<strong>I like to code</strong>
 <ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
+
+  <li><a href="https://leetcode.com/u/Xavier_2212/">Leetcode</a></li>
+  <li><a href="https://www.geeksforgeeks.org/user/debugg08/">GeeksforGeeks</a></li>
+  <li><a href="https://www.codechef.com/users/xavier_0811">CodeChef</a></li>
+
+
 </ul>
 </Description>
 <Description>
 <strong>Tools</strong>
 <ul>
-    <li>
-       Figma
-    </li>
+    
+       Vscode, Online Compiler
+    
     
 </ul>
 </Description>
@@ -122,15 +135,15 @@ I love to create design which speaks, Keep it clean, minimal and simple.
             </Main>
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Frontend Developer
+    <Develope width={40} height={40} /> Developement
 </Title>
 <Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+I like to build beutiful website using different tools.
 </Description>
 <Description>
 <strong>Skills</strong>
 <p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
+Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase, NodeJs, ExpressJs, MongoDb, TypeScript.
 </p>
 </Description>
 <Description>
@@ -139,6 +152,7 @@ Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
 VScode, Github, Codepen etc.
 </p>
 </Description>
+
 
             </Main>
 
@@ -151,4 +165,4 @@ VScode, Github, Codepen etc.
     )
 }
 
-export default MySkillsPage
+export default MySkillsPage

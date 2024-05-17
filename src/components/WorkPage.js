@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { DarkTheme } from "./Themes";
+import { DarkTheme, lightTheme } from "./Themes";
 import { motion } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
@@ -13,7 +13,8 @@ import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 
 const Box = styled.div`
-  background-color: ${(props) => props.theme.body};
+  // background-color: ${(props) => props.theme.body};
+  background-color:#DDD3C3;
 
   height: 400vh;
   position: relative;
@@ -74,10 +75,10 @@ const WorkPage = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <Box>
-        <LogoComponent theme="dark" />
-        <SocialIcons theme="dark" />
+        <LogoComponent theme="light" />
+        <SocialIcons theme="light" />
         <PowerButton />
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
@@ -86,10 +87,10 @@ const WorkPage = () => {
           ))}
         </Main>
         <Rotate ref={yinyang}>
-          <YinYang width={80} height={80} fill={DarkTheme.text} />
+          <YinYang width={80} height={80} fill={lightTheme.text} />
         </Rotate>
 
-        <BigTitlte text="WORK" top="10%" right="20%" />
+        <BigTitlte text="Projects" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );

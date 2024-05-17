@@ -11,7 +11,8 @@ import Intro from './Intro'
 
 
 const MainContainer = styled.div`
-background: ${props => props.theme.body};
+// background: ${props => props.theme.body};
+background:#DDD3C3;
 width: 100vw;
 height: 100vh;
 overflow:hidden;
@@ -145,7 +146,7 @@ const Main = () => {
                 <span>click here</span>
             </Center>
 
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="mailto:anshumdwivedi8@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -161,7 +162,11 @@ const Main = () => {
                 >
                     Say hi..
                 </motion.h2>
+                
             </Contact>
+        
+        
+
             <BLOG to="/blog">
                 <motion.h2
                 initial={{
@@ -175,9 +180,10 @@ const Main = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Blog
+                    Work
                 </motion.h2>
             </BLOG>
+
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{
@@ -191,7 +197,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Work
+                    Projects
                 </motion.h2>
             </WORK>
             <BottomBar>

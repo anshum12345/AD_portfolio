@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
+import {DarkTheme, lightTheme} from './Themes';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -32,6 +32,13 @@ animation: ${float} 4s ease infinite;
 img{
     width: 100%;
     height: auto;
+}
+a{
+    text-decoration:none;
+    color:#DDD3C3;
+    font-size:2rem;
+    font-weight:bold;
+    font-family:cursive;
 }
 `
 const Main =  styled.div`
@@ -70,13 +77,17 @@ const AboutPage = () => {
 
         <Spaceman>
             <img src={astronaut} alt="spaceman" />
+            <a href='https://anshumdwivedi.netlify.app'>Blog</a>
         </Spaceman>    
         <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
+        
+
+
+I specialize in creating awesome websites that look great and work smoothly for users. I'm really good at using tools like React.js, HTML, CSS, and JavaScript to make websites look amazing and fun to use. 
 <br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
+But I'm not just limited to making things look pretty—I'm also starting to learn how to make the behind-the-scenes stuff work smoothly too, using technologies like Node.js and Express.js.
 <br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+Also Knowledge about Data Structure & Algorithm and solve the problems on LeetCode, GeeksforGeeks and CodeChef.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
