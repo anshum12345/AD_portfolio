@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 // import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
-import { GeeksforGeeks, Github, LeetCode, Linkedin } from "../components/AllSvgs";
+import { Resume, Github, LeetCode, Linkedin } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -110,9 +110,9 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.geeksforgeeks.org/user/debugg08/"}
+          href={"https://drive.google.com/file/d/16bjuWGUIdgAm9xfKP4M7b4DybpyoDMMF/view?usp=drivesdk"}
         >
-          <GeeksforGeeks
+          <Resume
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}

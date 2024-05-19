@@ -118,6 +118,7 @@ Solving Data Structure and Algorithm problems using C++
   <li><a href="https://leetcode.com/u/Xavier_2212/">Leetcode</a></li>
   <li><a href="https://www.geeksforgeeks.org/user/debugg08/">GeeksforGeeks</a></li>
   <li><a href="https://www.codechef.com/users/xavier_0811">CodeChef</a></li>
+  <li><a href="https://takeuforward.org/profile/Anshum_0811">Striver DSA Sheet</a></li>
 
 
 </ul>

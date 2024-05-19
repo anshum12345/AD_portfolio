@@ -161,6 +161,9 @@ const Main = () => {
                 
                 >
                     Say hi..
+                    
+                
+                    
                 </motion.h2>
                 
             </Contact>
@@ -217,6 +220,7 @@ const Main = () => {
                     About.
                 </motion.h2>
             </ABOUT>
+            
             <SKILLS to="/skills">
                 <motion.h2
                 initial={{
