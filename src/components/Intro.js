@@ -46,8 +46,12 @@ display: flex;
     left: 50%;
     transform: translate(-50%,0%);
   
-    width: 100%;
+    width: 60%;
     height: auto;
+
+    @media(max-width:750px){
+        width:40vw;
+    }
 }
 `
 
@@ -64,11 +68,13 @@ const Text = styled.div`
         color:#DDD3C3;
         font-size: calc(0.5rem + 1.2vw);
         font-weight:300;
+        
     }
 
     pre {
         white-space: pre-wrap; /* Preserve line breaks */
     }
+
 `;
 
 const Intro = () => {
@@ -81,16 +87,16 @@ const Intro = () => {
             <SubBox>
                 <Text>
                     <pre>
-                        {`#include <iostream>
-using namespace std;
-
-int main() {
-    cout << " I am Anshum Dwivedi " << endl;
-    cout << " Frontend Developer " << endl;
-    cout << " Familiar with DSA " << endl;
-
-    return 0;
-}`}
+                        {`Const About = ()=> {
+    return(
+    <div>
+    I am Anshum Dwivedi 
+    Frontend Developer 
+    Familiar with DSA 
+    <div/>
+    );
+   };
+export default About;`}
                     </pre>
                 </Text>
                 
