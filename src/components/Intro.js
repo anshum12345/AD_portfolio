@@ -73,6 +73,9 @@ const Text = styled.div`
 
     pre {
         white-space: pre-wrap; /* Preserve line breaks */
+        @media(max-width:1200px) {
+            white-space: pre-line; /* Break lines normally */
+        }
     }
 
 `;

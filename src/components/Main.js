@@ -22,11 +22,17 @@ position: relative;
 h2,h3,h4,h5,h6{
   font-family:'Karla', sans-serif ;
   font-weight:500;
+
+  
 }
 `
 
 const Container = styled.div`
 padding: 2rem;
+
+@media (max-width: 700px) {
+    font-size: smaller; 
+}
 `
 
 const Contact = styled.a`
@@ -36,15 +42,19 @@ top: 2rem;
 right: calc(1rem + 2vw);
 text-decoration: none;
 z-index:1;
+
+
 `
 const BLOG = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
-transform: rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index:1;
+    color: ${props => props.theme.text};
+    position: absolute;
+    top: 50%;
+    right: calc(1rem + 2vw);
+    transform: rotate(90deg) translate(-50%, -50%);
+    text-decoration: none;
+    z-index: 1;
+
+    
 `
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
@@ -55,6 +65,8 @@ left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
 z-index:1;
+
+
 `
 
 const BottomBar = styled.div`
@@ -66,17 +78,24 @@ width: 100%;
 
 display: flex;
 justify-content: space-evenly;
+
+
 `
 
 const ABOUT = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index:1;
+
+
 `
 const SKILLS = styled(NavLink)`
 color: ${props => props.theme.text};
 text-decoration: none;
 z-index:1;
+
+
+
 `
 
 const rotate = keyframes`
@@ -88,30 +107,41 @@ to{
 }
 `
 
+
 const Center = styled.button`
-position: absolute;
-top: ${props => props.click ? '85%' :'50%'  };
-left: ${props => props.click ? '92%' :'50%'  };
-transform: translate(-50%,-50%);
-border: none;
-outline: none;
-background-color: transparent;
-cursor: pointer;
+  position: absolute;
+  top: ${props => (props.click ? '85%' : '50%')};
+  left: ${props => (props.click ? '92%' : '50%')};
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-transition: all 1s ease;
-
-&>:first-child{
+  & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
-}
+  }
 
-&>:last-child{
-    display: ${props => props.click ? 'none' :'inline-block'  };
+  & > :last-child {
+    display: ${props => (props.click ? 'none' : 'inline-block')};
     padding-top: 1rem;
-}
+  }
+
+  @media (max-width: 1000px) {
+    /* Styles for screens less than 700px */
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    font-size: 1rem; /* Adjust the font size as needed */
+    /* Add any other styles for smaller screens */
+  }
+
+  
+
 `
 
 const DarkDiv = styled.div`
@@ -124,6 +154,10 @@ width: ${props => props.click ? '50%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
 z-index:1;
 transition: height 0.5s ease, width 1s ease 0.5s;
+
+ @media (max-width: 700px) {
+        font-size: smaller; 
+    }
 `
 
 
@@ -142,8 +176,9 @@ const Main = () => {
             <SocialIcons theme={click ? 'dark' :'light'} />
            
             <Center click={click}>
-                <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                <YinYang  onClick={()=> handleClick()} width={click ? 80 : 200} height={click ? 80 : 200} fill='currentColor' />
                 <span>click here</span>
+                
             </Center>
 
             <Contact target="_blank" href="mailto:anshumdwivedi8@gmail.com">

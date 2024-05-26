@@ -10,6 +10,7 @@ import BigTitle from "../subComponents/BigTitlte"
 import { motion } from 'framer-motion'
 
 // Styled components
+
 const fadeIn = keyframes`
     from {
         opacity: 0;
@@ -21,12 +22,16 @@ const fadeIn = keyframes`
 
 const MainContainer = styled(motion.div)`
     width: calc(100% - 20px); /* Decrease 20px from the width */
-    padding-top:4rem;
+    padding-top: 4rem;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fa; /* light gray background */
+    background-color: #DDD3C3; /* light gray background */
+    // background-image: url('https://w.forfun.com/fetch/56/562c90803ab3748a2bf3826db157ee21.jpeg'); /* Path to your background image */
+    background-size: cover; /* Make sure the background covers the whole area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
     animation: ${fadeIn} 1s ease-in-out; /* Adding animation */
 
     @media screen and (min-width: 751px) and (max-width: 1100px) {
@@ -71,7 +76,7 @@ const BlogPage = () => {
     const [showAnchor, setShowAnchor] = useState(false);
 
     useEffect(() => {
-        let num = (window.innerHeight - 70)/30;
+        let num = (window.innerHeight - 70) / 30;
         setNumbers(parseInt(num));
         handleResize(); // Call the function once to set initial state
         window.addEventListener('resize', handleResize);
@@ -93,7 +98,7 @@ const BlogPage = () => {
                         ))}
                     </Grid>
                 </Center>
-                {showAnchor && <AnchorComponent number={numbers}/>}
+                {showAnchor && <AnchorComponent number={numbers} />}
                 <BigTitle text="Work" top="5rem" left="5rem" />
             </Container>
         </MainContainer>

@@ -22,8 +22,10 @@ h1,h2,h3,h4,h5,h6{
 
 body{
     margin: 0;
+    background-color:#DDD3C3;
     padding: 0;
     overflow-x: hidden;
+    // overflow-y:hidden;
     font-family: 'Source Sans Pro',sans-serif;
 }
 

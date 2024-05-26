@@ -137,7 +137,7 @@ const MySkillsPage = () => {
             <p>VScode, Github, Codepen etc.</p>
           </Description>
         </Main>
-        <BigTitle text="SKILLS" top="80%" right="30%" />
+        <BigTitle text="SKILLS" top="80%" right="10%" />
       </Box>
     </ThemeProvider>
   );
