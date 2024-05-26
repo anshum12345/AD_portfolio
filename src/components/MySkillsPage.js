@@ -106,14 +106,15 @@ const MySkillsPage = () => {
             Solving Data Structure and Algorithm problems using C++
           </Description>
           <Description>
-            <strong>I like to code</strong>
-            <ul>
-              <li><a href="https://leetcode.com/u/Xavier_2212/">Leetcode</a></li>
-              <li><a href="https://www.geeksforgeeks.org/user/debugg08/">GeeksforGeeks</a></li>
-              <li><a href="https://www.codechef.com/users/xavier_0811">CodeChef</a></li>
-              <li><a href="https://takeuforward.org/profile/Anshum_0811">Striver DSA Sheet</a></li>
-            </ul>
-          </Description>
+  <strong>I like to code</strong>
+  <ul>
+    <li><a href="https://leetcode.com/u/Xavier_2212/" target="_blank">Leetcode</a></li>
+    <li><a href="https://www.geeksforgeeks.org/user/debugg08/" target="_blank">GeeksforGeeks</a></li>
+    <li><a href="https://www.codechef.com/users/xavier_0811" target="_blank">CodeChef</a></li>
+    <li><a href="https://takeuforward.org/profile/Anshum_0811" target="_blank">Striver DSA Sheet</a></li>
+  </ul>
+</Description>
+
           <Description>
             <strong>Tools</strong>
             <ul>
