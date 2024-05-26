@@ -1,174 +1,155 @@
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import {lightTheme} from './Themes';
-import { DSA, Develope} from './AllSvgs';
-
-
+import React from 'react';
+import styled, { ThemeProvider, css } from 'styled-components';
+import { lightTheme } from './Themes';
+import { DSA, Develope } from './AllSvgs';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
 import ParticleComponent from '../subComponents/ParticleComponent';
-import BigTitle from '../subComponents/BigTitlte'
+import BigTitle from '../subComponents/BigTitlte';
 
+
+// Styled components
 const Box = styled.div`
-background-color: #DDD3C3;
-width: 100vw;
-height:100vh;
-position: relative;
-display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+background:#DDD3C3;
+// flex-direction:row;
 
-justify-content: space-evenly;
-align-items: center;
-
-
-`
+`;
 
 const Main = styled.div`
-border: 2px solid ${props => props.theme.text};
-color: ${props => props.theme.text};
-// background-color: ${props => props.theme.body};
-background-color:#DDD3C3;
-padding: 2rem;
-width: 30vw;
-height: 60vh;
-// felx-direction:column;
-z-index:3;
-// justify-content:space-between;
-line-height: 1.5;
-cursor: pointer;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid ${(props) => props.theme.text};
+  background-color: ${({ theme }) => theme.background};
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 
-font-family: 'Ubuntu Mono',monospace;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
 
-&:hover{
-    color: ${props => props.theme.body};
-    background-color: ${props => props.theme.text};
-    transition:1s ease;
-
-}
-`
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
+`;
 
 const Title = styled.h2`
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: calc(1em + 1vw);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 
-${Main}:hover &{
-    &>*{
-        fill:${props => props.theme.body};
-    }
-}
-
-&>*:first-child{
-margin-right: 1rem;
-}
-`
+  svg {
+    margin-right: 10px;
+  }
+`;
 
 const Description = styled.div`
-color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
-padding: 0.5rem 0;
+  margin-bottom: 15px;
 
+  strong {
+    font-weight: bold;
+  }
 
-${Main}:hover &{
-   
-    color:${props => props.theme.body};
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-}
+  ul li {
+    margin-bottom: 5px;
+  }
 
-strong{
-margin-bottom: 1rem;
-text-transform: uppercase;
-}
-ul,p{
-margin-left: 2rem;
-}
-a{
-    text-decoration:none;
-    color: ${props => props.theme.text};
-    ${Main}:hover &{
-   
-        color:${props => props.theme.body};
-    
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.primary};
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.primaryHover};
     }
+  }
+`;
 
-   
-    
-}
-`
+// Responsive media query styles
+const hideOnSmallScreen = css`
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
+`;
 
+// MySkillsPage component
 const MySkillsPage = () => {
-return (
+  return (
     <ThemeProvider theme={lightTheme}>
-<Box>
-
-<LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
-<PowerButton />
-<ParticleComponent theme='light' />
+      <Box>
+        <LogoComponentContainer>
+          <LogoComponent theme='light' />
+        </LogoComponentContainer>
+        <SocialIconsContainer>
+          <SocialIcons theme='light' />
+        </SocialIconsContainer>
+        <PowerButton />
+        <ParticleComponent theme='light' />
         <Main>
-<Title>
-<Develope width={40} height={40} /> DSA
-</Title>
-<Description>
-Solving Data Structure and Algorithm problems using C++
-</Description>
-<Description>
-<strong>I like to code</strong>
-<ul>
+          <Title>
+            <Develope width={40} height={40} /> DSA
+          </Title>
+          <Description>
+            Solving Data Structure and Algorithm problems using C++
+          </Description>
+          <Description>
+            <strong>I like to code</strong>
+            <ul>
+              <li><a href="https://leetcode.com/u/Xavier_2212/">Leetcode</a></li>
+              <li><a href="https://www.geeksforgeeks.org/user/debugg08/">GeeksforGeeks</a></li>
+              <li><a href="https://www.codechef.com/users/xavier_0811">CodeChef</a></li>
+              <li><a href="https://takeuforward.org/profile/Anshum_0811">Striver DSA Sheet</a></li>
+            </ul>
+          </Description>
+          <Description>
+            <strong>Tools</strong>
+            <ul>
+           <p>VScode, Online Compiler</p>
+            </ul>
+          </Description>
+        </Main>
+        <Main>
+          <Title>
+            <Develope width={40} height={40} /> Development
+          </Title>
+          <Description>
+            I like to build beautiful websites using different tools.
+          </Description>
+          <Description>
+            <strong>Skills</strong>
+            <p>Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase, NodeJs, ExpressJs, MongoDb, TypeScript.</p>
+          </Description>
+          <Description>
+            <strong>Tools</strong>
+            <p>VScode, Github, Codepen etc.</p>
+          </Description>
+        </Main>
+        <BigTitle text="SKILLS" top="80%" right="30%" />
+      </Box>
+    </ThemeProvider>
+  );
+};
 
-  <li><a href="https://leetcode.com/u/Xavier_2212/">Leetcode</a></li>
-  <li><a href="https://www.geeksforgeeks.org/user/debugg08/">GeeksforGeeks</a></li>
-  <li><a href="https://www.codechef.com/users/xavier_0811">CodeChef</a></li>
-  <li><a href="https://takeuforward.org/profile/Anshum_0811">Striver DSA Sheet</a></li>
+export default MySkillsPage;
 
+// Styled components for hiding on small screens
+const LogoComponentContainer = styled.div`
+  ${hideOnSmallScreen};
+`;
 
-</ul>
-</Description>
-<Description>
-<strong>Tools</strong>
-<ul>
-    
-       Vscode, Online Compiler
-    
-    
-</ul>
-</Description>
-
-            </Main>
-            <Main>
-<Title>
-    <Develope width={40} height={40} /> Developement
-</Title>
-<Description>
-I like to build beutiful website using different tools.
-</Description>
-<Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase, NodeJs, ExpressJs, MongoDb, TypeScript.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
-</Description>
-
-
-            </Main>
-
-            <BigTitle text="SKILLS" top="80%" right="30%" />
-
-        </Box>
-
-        </ThemeProvider>
-        
-    )
-}
-
-export default MySkillsPage
+const SocialIconsContainer = styled.div`
+  ${hideOnSmallScreen};
+`;
