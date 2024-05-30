@@ -2,6 +2,16 @@
 
 export const Work = [
   {
+    id:1,
+    name:"Resume-Maker",
+    description:"Easily create a standout resume tailored to your skills and experiences with our user-friendly online platform. Get started today!",
+    tags:["JavaScript","React.js","Tailwind Css"],
+    
+    demo:"https://resume-maker-livid-rho.vercel.app/",
+    github:"https://github.com/anshum12345/resume-maker"
+    
+},
+  {
       id:2,
       name:"Local Help Hub",
       description:"This Website is designed for needy people.",
@@ -10,16 +20,7 @@ export const Work = [
       demo:"https://btp-cloud.vercel.app/",
       github:"https://github.com/anshum12345/btp_cloud"
   },
-  {
-      id:1,
-      name:"Resume-Maker",
-      description:"Easily create a standout resume tailored to your skills and experiences with our user-friendly online platform. Get started today!",
-      tags:["JavaScript","React.js","Tailwind Css"],
-      
-      demo:"https://resume-maker-livid-rho.vercel.app/",
-      github:"https://github.com/anshum12345/resume-maker"
-      
-  },
+
 //   {
 //       id:3,
 //       name:"Dev.to Clone",

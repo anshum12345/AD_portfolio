@@ -1,14 +1,5 @@
 export const Blogs = [
     {
-        id: 3,
-        name: "Google-Clone",
-        tags: ["Reactjs", "Html", "Css", "JavaScript"],
-        // date: "13 May, 2021",
-        imgSrc: "https://www.zdnet.com/a/img/resize/bdae6ce1562b1365b90bddf9618cc2789728273a/2022/03/22/6162f1ab-ff26-46aa-a9c8-20acc0a3cf5d/gettyimages-1237940009.jpg?auto=webp&width=1280",
-        link: "https://google-search-app-beta.vercel.app/",
-        Github: "https://github.com/anshum12345/google-search-app"
-    },
-    {
         id: 1,
         name: "Game-Khelo",
         tags: ["react", "styled-components"],
@@ -26,12 +17,24 @@ export const Blogs = [
         link: "https://applevision-clone.netlify.app/",
         Github: "https://github.com/anshum12345/Apple-vision-Clone"
     },
+
+    {
+        id: 3,
+        name: "Google-Clone",
+        tags: ["Reactjs", "Html", "Css", "JavaScript"],
+        // date: "13 May, 2021",
+        imgSrc: "https://www.zdnet.com/a/img/resize/bdae6ce1562b1365b90bddf9618cc2789728273a/2022/03/22/6162f1ab-ff26-46aa-a9c8-20acc0a3cf5d/gettyimages-1237940009.jpg?auto=webp&width=1280",
+        link: "https://google-search-app-beta.vercel.app/",
+        Github: "https://github.com/anshum12345/google-search-app"
+    },
+   
+  
     {
         id: 4,
         name: "YouTube-Clone",
         tags: ["react", "JavaScript", "API", "Tailwind Css"],
         // date: "26 May, 2021",
-        imgSrc: "https://res.cloudinary.com/practicaldev/image/fetch/s--r5oUDhhT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/036s7j5b73up7455rdth.png",
+        imgSrc: "https://i.ytimg.com/vi/TIu_KrdWO1M/maxresdefault.jpg",
         link: "https://youtube-clone-nu-lime.vercel.app/",
         Github: "https://github.com/anshum12345/Youtube-clone"
     },
