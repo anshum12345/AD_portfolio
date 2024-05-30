@@ -2,7 +2,7 @@
 
 export const Work = [
   {
-      id:1,
+      id:2,
       name:"Local Help Hub",
       description:"This Website is designed for needy people.",
       tags:["Html", "Css", "JS", "PHP", "MySql"],
@@ -10,16 +10,16 @@ export const Work = [
       demo:"https://btp-cloud.vercel.app/",
       github:"https://github.com/anshum12345/btp_cloud"
   },
-//   {
-//       id:2,
-//       name:"Job listing website",
-//       description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-//       tags:["react","sass"],
+  {
+      id:1,
+      name:"Resume-Maker",
+      description:"Easily create a standout resume tailored to your skills and experiences with our user-friendly online platform. Get started today!",
+      tags:["JavaScript","React.js","Tailwind Css"],
       
-//       demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-//       github:"https://github.com/codebucks27/react-job-listing-website"
+      demo:"https://resume-maker-livid-rho.vercel.app/",
+      github:"https://github.com/anshum12345/resume-maker"
       
-//   },
+  },
 //   {
 //       id:3,
 //       name:"Dev.to Clone",

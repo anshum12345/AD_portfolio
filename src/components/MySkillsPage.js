@@ -97,7 +97,7 @@ const MySkillsPage = () => {
           <SocialIcons theme='light' />
         </SocialIconsContainer>
         <PowerButton />
-        <ParticleComponent theme='light' />
+        {/* <ParticleComponent theme='light' />/ */}
         <Main>
           <Title>
             <Develope width={40} height={40} /> DSA
