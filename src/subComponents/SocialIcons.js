@@ -70,7 +70,7 @@ const SocialIcons = ({ theme }) => {
       <Line
         color={theme}
         initial={{ height: 0 }}
-        animate={{ height: "8rem" }}
+        animate={{ height: "4rem" }}
         transition={{ type: "spring", duration: 1, delay: 0.8 }}
       />
     </Icons>
