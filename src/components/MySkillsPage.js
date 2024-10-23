@@ -110,7 +110,7 @@ const MySkillsPage = () => {
   <ul>
     <li><a href="https://leetcode.com/u/Xavier_2212/" target="_blank">Leetcode</a></li>
     <li><a href="https://www.geeksforgeeks.org/user/debugg08/" target="_blank">GeeksforGeeks</a></li>
-    <li><a href="https://www.codechef.com/users/xavier_0811" target="_blank">CodeChef</a></li>
+    <li><a href="https://www.codechef.com/users/debugx_0811" target="_blank">CodeChef</a></li>
     <li><a href="https://takeuforward.org/profile/Anshum_0811" target="_blank">Striver DSA Sheet</a></li>
   </ul>
 </Description>

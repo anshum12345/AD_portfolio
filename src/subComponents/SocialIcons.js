@@ -47,7 +47,7 @@ const SocialIcons = ({ theme }) => {
         },
         {
           href:
-            "https://drive.google.com/file/d/1V8aDX6tYoxaIfYrwIeuDiWh6Hk4ezXXr/view?usp=drivesdk",
+            "https://drive.google.com/file/d/1J1Vmc7fqF9hXOJxBUMFYOfMe3D_GDltI/view?usp=drive_link",
           Component: Resume,
         },
       ].map(({ href, Component }, index) => (

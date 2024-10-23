@@ -27,10 +27,18 @@ export const Blogs = [
         link: "https://google-search-app-beta.vercel.app/",
         Github: "https://github.com/anshum12345/google-search-app"
     },
-   
+    {
+    id: 4,
+    name: "Nike-Shoes",
+    tags: ["react", "styled-components"],
+    // date: "5 July, 2021",
+    imgSrc: "https://sneakernews.com/wp-content/uploads/2022/03/yellow-toe-jordan-1-release-date-2.jpg",
+    link: "https://new-shoes-tawny.vercel.app/",
+    Github: "https://github.com/anshum12345/NewShoes"
+    },
   
     {
-        id: 4,
+        id: 5,
         name: "YouTube-Clone",
         tags: ["react", "JavaScript", "API", "Tailwind Css"],
         // date: "26 May, 2021",
