@@ -1,6 +1,16 @@
 // work data
 
 export const Work = [
+  
+  {
+    id:1,
+    name:"CodeArt",
+    description:"Here You can download your code in image form. compile your code and many more feature",
+    tags:["react","api","sass"],
+    
+    demo:"https://code-art-ad.vercel.app/",
+    github:"https://github.com/anshum12345/CodeArt"
+},
   {
     id:2,
     name:"Resume-Maker",
@@ -21,15 +31,15 @@ export const Work = [
       github:"https://github.com/anshum12345/btp_cloud"
   },
 
-  {
-      id:1,
-      name:"CodeArt",
-      description:"Here You can download your code in image form. compile your code and many more feature",
-      tags:["react","api","sass"],
+  // {
+  //     id:1,
+  //     name:"CodeArt",
+  //     description:"Here You can download your code in image form. compile your code and many more feature",
+  //     tags:["react","api","sass"],
       
-      demo:"https://code-art-ad.vercel.app/",
-      github:"https://github.com/anshum12345/CodeArt"
-  },
+  //     demo:"https://code-art-ad.vercel.app/",
+  //     github:"https://github.com/anshum12345/CodeArt"
+  // },
 //   {
 //       id:4,
 //       name:"Sidebar Menu",

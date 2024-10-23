@@ -95,32 +95,32 @@ const Main = styled.div`
   font-style: italic;
 `;
 
-const RotatingElement = styled.div`
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 15vw;
-  height: 15vw;
-  border-radius:2rem;
-  background-color: #DDD3C3;
-  animation: ${rotate} 10s linear infinite;
+// const RotatingElement = styled.div`
+//   position: absolute;
+//   top: 5%;
+//   left: 5%;
+//   width: 15vw;
+//   height: 15vw;
+//   border-radius:2rem;
+//   background-color: #DDD3C3;
+//   animation: ${rotate} 10s linear infinite;
 
-  @media(max-width:1000px){
-    width:25vw;
-    height:25vw;
-    top:15%;
-    left:10%;
+//   @media(max-width:1000px){
+//     width:25vw;
+//     height:25vw;
+//     top:15%;
+//     left:10%;
 
-  }
+//   }
 
-  // @media(max-width:1000px){
-  //   width:20vw;
-  //   height:20vw;
-  //   top:15%;
-  //   left:10%;
+//   // @media(max-width:1000px){
+//   //   width:20vw;
+//   //   height:20vw;
+//   //   top:15%;
+//   //   left:10%;
 
-  // }
-`;
+//   // }
+// `;
 
 const PulsingBorder = styled.div`
   position: absolute;
@@ -201,7 +201,7 @@ Also Knowledge about Data Structure & Algorithm and solve the problems on LeetCo
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="25%" />
-        <RotatingElement />
+        {/* <RotatingElement /> */}
         <PulsingBorder />
         <ScalingElement />
 
