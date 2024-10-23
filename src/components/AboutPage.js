@@ -183,7 +183,7 @@ const AboutPage = () => {
 <ParticleComponent theme='dark' />
 
         <Spaceman>
-<a href='https://anshumdwivedi.netlify.app' >Blog</a>
+{/* <a href='https://anshumdwivedi.netlify.app' >blog</a> */}
 
             <img src={astronaut} alt="spaceman" />
             {/* <a href='https://anshumdwivedi.netlify.app'>Blog</a> */}
