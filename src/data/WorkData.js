@@ -5,7 +5,7 @@ export const Work = [
     id:1,
     name:"DocAppointment",
     description:"Developed a scalable doctor appointment platform with 20+ features for seamless scheduling, real-time updates, authentication, doctor listings, and efficient admin management.",
-    tags:["JavaScript","React.js","MongoDB","Express.js","Node.js","Redux","JWT","Material-UI","TailwindCSS"],
+    tags:["JavaScript","React.js","MongoDB","Express.js","Node.js","TailwindCSS"],
     
     demo:"https://doc-appoinment8.vercel.app/",
     github:"https://github.com/anshum12345/doc_appoinment"
