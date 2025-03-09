@@ -1,18 +1,26 @@
 // work data
 
 export const Work = [
-  
   {
     id:1,
+    name:"DocAppointment",
+    description:"Developed a scalable doctor appointment platform with 20+ features for seamless scheduling, real-time updates, authentication, doctor listings, and efficient admin management.",
+    tags:["JavaScript","React.js","MongoDB","Express.js","Node.js","Redux","JWT","Material-UI","TailwindCSS"],
+    
+    demo:"https://doc-appoinment8.vercel.app/",
+    github:"https://github.com/anshum12345/doc_appoinment"
+},
+  {
+    id:2,
     name:"CodeArt",
     description:"Here You can download your code in image form. compile your code and many more feature",
-    tags:["react","api","sass"],
+    tags:["react","JavaScript","Sass","API","Express.js","Node.js","MongoDB"],
     
     demo:"https://code-art-ad.vercel.app/",
     github:"https://github.com/anshum12345/CodeArt"
 },
   {
-    id:2,
+    id:3,
     name:"Resume-Maker",
     description:"Easily create a standout resume tailored to your skills and experiences with our user-friendly online platform. Get started today!",
     tags:["JavaScript","React.js","Tailwind Css"],
@@ -22,7 +30,7 @@ export const Work = [
     
 },
   {
-      id:3,
+      id:4,
       name:"Local Help Hub",
       description:"This Website is designed for needy people.",
       tags:["Html", "Css", "JS", "PHP", "MySql"],
